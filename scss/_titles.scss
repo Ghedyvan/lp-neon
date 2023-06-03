@@ -1,6 +1,12 @@
 h1 {
   font-size: 6.4rem;
   font-weight: 600;
+  @include responsive(1050px){
+    font-size: 5.5rem;
+  }
+  @include responsive(991px){
+    font-size: 5.2rem;
+  }
 }
 h2 {
   font-weight: bold;
