@@ -3,6 +3,9 @@
     height: 78.6rem;
     background: url(../img/bg-hero.svg) no-repeat center;
     padding-top: 17.5rem;
+    .s-hero-mobile{
+        display: none;
+    }
     .container{
         @include flex(row, flex-start, space-between);
     }
@@ -150,13 +153,142 @@
         }
         .text{
             margin-bottom: 5rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            h3, h1{
+            @include flex(column, center, center);
+            h3{
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 120%;
+                letter-spacing: -0.5px;
                 text-align: center;
+                margin-bottom: 2.4rem;
+            } 
+            h1{
+                text-align: center;
+                font-weight: 600;
+                font-size: 48px;
+                line-height: 112%;
+                width: 100%;
+                max-width: 68.5rem; 
+                margin-bottom: 2.6rem;
+            }
+            h2{
+                margin-bottom: 0;
+            }
+            ul{
+                margin-top: 3.9rem;
+                li{
+                    
+                    span{
+                        font-weight: 400;
+                        font-size: 1.346rem;
+                        line-height: 20px;
+                    }
+                }
             }
         }
+        .area-image{
+            width: 100%;
+            max-width: 51.117rem;
+            .image{
+                top: 0;
+                height: 42.4rem;
+                .card-circle{
+                    max-width: 42.978rem;
+                    top: 0;
+                    right: 1.3rem;
+                }
+                .card-front{
+                    max-width: 34.062rem;
+                    top: 3.581rem;
+                    right: 0;
+                }
+                .card-back{
+                    max-width: 27.431rem;
+                    right: 2.98rem;
+                    bottom: 3.686rem;
+                }
+            }
+            h2{
+                margin-bottom: 2.4rem;
+            }
+            
+        }
+
+    }
+    @include responsive(480px){
+        padding-top: 12.4rem;
+        height: 75rem;
+        .text{
+            h3{
+                margin-bottom: 1.5rem;
+            }
+            h1{
+                width: 100%;
+                max-width: 32.1rem;
+                font-weight: 600;
+                font-size: 32px;
+                line-height: 112%;
+                text-align: center;
+                letter-spacing: -0.5px;
+                margin-bottom: 3.7rem;
+            }
+            ul{
+                margin-top: 3.7rem;
+                flex-direction: column;
+                align-items: flex-start;
+                padding-left: 6.1rem;
+                li{
+                    max-width: 100%;
+                    justify-content: left;
+                    &:not(:last-child){
+                        padding-bottom: 2rem;
+                    }
+                    .icon{
+                        width: 2.5rem;
+                        height: auto;
+                        background-color: transparent;
+                    }
+                    .s-hero-mobile{
+                        display: block;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+                    .s-hero-desktop{
+                        display: none;
+                    }
+                }
+            }
+        }
+        .area-image{
+            height: 24.81rem;
+            align-items: center;
+            .image{
+                height: 24.81rem;
+            }
+            h2{
+                display: none;
+            }
+            width: 100%;
+            max-width: 31.799rem;
+            .card-circle{
+                width: 26.736rem;
+                right: 0;
+                top: 0;
+            }
+            .card-front{
+                width: 21.189rem;
+                top: 2.9rem;
+                left: 0;
+            }
+            .card-back{
+                width: 17.064rem;
+                right: 0.64rem;
+                top: 9.23rem;
+            }
+        }
+        
     }
 }
 .card-neon{
